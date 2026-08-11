@@ -2,28 +2,30 @@ import React from 'react';
 
 import{ Grid } from '@material-ui/core';
 
+import { SearchBar, VideoDetails }  from './components';
+
 import youtube from './api/youtube';
 
-import { SearchBar, VideoList, VideoDetails } from './components';
+
 
 class App extends React.Component {
   render() {
     return (
-       <Grid justify="center" container spacing={16}>
+       <Grid justifyContent="center" container spacing={16}>
         <Grid item xs={12}>
             <Grid container spacing={16}>
                 <Grid item xs={12}>
-                    {/* Search Bar */}
+                    <SearchBar/>
                  </Grid>
                 <Grid item xs={8}>
-                  {/* Video Details */}
+                    <VideoDetails/>
                 </Grid>
                 <Grid item xs={4}>
-                    {/* Video List */}
-                    </Grid>
+                    {/*VideoList */}
                 </Grid>
-            </Grid>
+             </Grid>
         </Grid>
+    </Grid>
     )
   }
 }
@@ -31,6 +33,9 @@ class App extends React.Component {
 
 
 export default App;
+
+
+
 
 
 
